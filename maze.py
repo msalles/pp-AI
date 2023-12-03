@@ -135,7 +135,7 @@ class Maze():
         self.explored = set()
 
         # keep looping until solution find
-        while true:
+        while True:
 
             # if nothing left in frontier then no path
             if frontier.empty():
@@ -166,7 +166,7 @@ class Maze():
             # add neighbors to frontier
             for actions, state in self.neighbors(node.state):
                 if not frontier.contains_state(state) and state not in self.explored:
-                    child = Node(state=state, parent=node, action=action)
+                    child = Node(state=state, parent=node, action=actions)
                     frontier.add(child)
     
 
